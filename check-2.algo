@@ -1,0 +1,31 @@
+ALGORITHM InsertionSort
+
+VAR
+
+    Tab: ARRAY of INTEGER;    // Array to be sorted
+    n: INTEGER;               // Length of the array
+    i, j, key: INTEGER;       // Loop counters and key element for insertion
+
+BEGIN
+
+    n := LENGTH(Tab);         // Get the length of the array
+    Read(n);
+
+FOR i FROM 1 TO n - 1 DO  // Start from the second element
+    key := Tab[i];        // The current element to be inserted
+    j := i - 1;           // Index of the last sorted element
+
+    // Shift elements of Tab[0..i-1] that are greater than key
+    
+    WHILE (j >= 0) AND (Tab[j] > key) DO
+        Tab[j + 1] := Tab[j];  // Move larger element one position ahead
+        j := j - 1;             // Move to the previous element
+    END_WHILE
+    
+    Tab[j + 1] := key;       // Insert the key at its correct position
+
+END_FOR
+
+    Write("Sorted array: ", Tab);  // Output the sorted array
+
+END
