@@ -4,7 +4,7 @@ n=5
 
 init tableau
 
-inx=index
+> inx=index
 
 tab [1|5|4|2|8]
 
