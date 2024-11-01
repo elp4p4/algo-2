@@ -9,7 +9,7 @@ VAR
 BEGIN
 
     n := LENGTH(Tab);         // Get the length of the array
-    Read(n);
+    Read(Tab);
 
 FOR i FROM 1 TO n - 1 DO  // Start from the second element
     key := Tab[i];        // The current element to be inserted
